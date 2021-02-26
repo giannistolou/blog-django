@@ -1,6 +1,6 @@
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the articles index.")
+    return render(request, 'index.html')
