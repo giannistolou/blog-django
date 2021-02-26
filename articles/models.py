@@ -12,8 +12,15 @@ STATUS = (
 class Category(models.Model):
     content = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.content
+    
+
 class Tag(models.Model):
     content = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.content
 
 
 class Article(models.Model):
@@ -27,4 +34,7 @@ class Article(models.Model):
     content = HTMLField()
     updated_on = models.DateTimeField(auto_now= True)
     image = models.ImageField(upload_to='uploads/% d/% m/% y/')
+
+    def __str__(self):
+        return self.title
     
