@@ -17,7 +17,7 @@ print 'python code'
 ```
 
 ## Libraries
-We use this...
+- [tinymce](https://www.tiny.cloud/)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
