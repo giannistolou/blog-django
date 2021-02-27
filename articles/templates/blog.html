@@ -23,6 +23,10 @@
                                 <p class="subtitle is-6">{{article.author.first_name}} {{article.author.last_name}}</p>
                             </div>
                         </div>
+                       
+                       {% for tag in article.tags.all %}
+                        <span class="tag">{{tag}}</span>
+                        {%endfor%} 
                         <div class="content">{{article.description | safe}}
                         <br>
                         <time>{{article.created_date}}</time>
