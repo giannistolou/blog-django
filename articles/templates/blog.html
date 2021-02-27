@@ -1,0 +1,37 @@
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<div class="columns">
+
+    {% for artcile in articles %}
+  
+    <div class="column is-one-third">
+    <div class="card">
+    <div class="card-image">
+        <figure class="image is-4by3">
+        <img src="../../" + {{artcile.image}} alt="Placeholder image">
+        </figure>
+    </div>
+    <div class="card-content">
+        <div class="media">
+        <div class="media-content">
+            <p class="title is-4">{{artcile.title}}</p>
+            <p class="subtitle is-6">@{{artcile.author}}</p>
+        </div>
+        </div>
+        <div class="content">
+        {{artcile.content | safe}}
+       <a href="#">Read More</a>
+        <br>
+        <time>{{artcile.created_date}}</time>
+        </div>
+    </div>
+
+    </div>
+      {% endfor %}
+    </div>
+
+</body>
