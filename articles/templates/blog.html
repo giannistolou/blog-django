@@ -13,9 +13,9 @@
                    <div class="card-image">
                         <figure class="image is-4by3">
                         <!--@ToDo fix the image path-->
-                        <img src={{article.image.name}} alt="Placeholder image">
+                        <img src="{{article.image.name}}" alt="Placeholder image">
                         </figure>
-                    </div> 
+                    </div>
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
@@ -23,11 +23,11 @@
                                 <p class="subtitle is-6">{{article.author.first_name}} {{article.author.last_name}}</p>
                             </div>
                         </div>
-                        <div class="content">{{article.content | safe}}
+                        <div class="content">{{article.description | safe}}
                         <br>
                         <time>{{article.created_date}}</time>
                         <br>
-                        <a href="#">Read More</a>
+                        <a href="article/{{article.id}}">Read More</a>
                         </div>
                 </div>
             </div>

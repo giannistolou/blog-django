@@ -26,7 +26,8 @@ class Tag(models.Model):
 
 class Article(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=100)
+    description = models.TextField(max_length=200)
     author = models.ForeignKey(User, on_delete= models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)
