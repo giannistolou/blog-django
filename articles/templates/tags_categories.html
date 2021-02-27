@@ -1,0 +1,14 @@
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{name}}</title>
+</head>
+<body>
+    <ul class="menu-list">
+        {% for item in param %}
+            <li>
+                <a href="/{{url}}/{{item.id}}">{{item}}</a>
+            </li>
+        {% endfor %}
+</ul>
+</body>
