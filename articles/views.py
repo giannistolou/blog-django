@@ -14,3 +14,7 @@ def blog(request):
 def article(request, article_id):
     article = get_object_or_404(Article, pk=article_id)
     return render(request, 'article.html', {'article': article})
+
+def tag(request, tag_id):
+    articles = Article.objects.filter(tags=tag_id)
+    return render(request, 'tag.html', {'articles': articles})
