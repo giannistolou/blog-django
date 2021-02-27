@@ -4,34 +4,33 @@
 
 </head>
 <body>
-<div class="columns">
+    <div class="columns">
 
-    {% for artcile in articles %}
-  
-    <div class="column is-one-third">
-    <div class="card">
-    <div class="card-image">
-        <figure class="image is-4by3">
-        <img src="../../" + {{artcile.image}} alt="Placeholder image">
-        </figure>
+        {% for article in articles %}
+    
+            <div class="column is-one-third">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                        <!--@ToDo fix the image path-->
+                        <img src={{article.image.name}} alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">{{article.title}}</p>
+                                <p class="subtitle is-6">{{article.author.first_name}} {{article.author.last_name}}</p>
+                            </div>
+                        </div>
+                        <div class="content">{{article.content | safe}}
+                        <br>
+                        <time>{{article.created_date}}</time>
+                        <br>
+                        <a href="#">Read More</a>
+                        </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    <div class="card-content">
-        <div class="media">
-        <div class="media-content">
-            <p class="title is-4">{{artcile.title}}</p>
-            <p class="subtitle is-6">@{{artcile.author}}</p>
-        </div>
-        </div>
-        <div class="content">
-        {{artcile.content | safe}}
-       <a href="#">Read More</a>
-        <br>
-        <time>{{artcile.created_date}}</time>
-        </div>
-    </div>
-
-    </div>
-      {% endfor %}
-    </div>
-
 </body>
