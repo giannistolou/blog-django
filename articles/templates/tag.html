@@ -4,38 +4,5 @@
 <title>Tag</title>
 </head>
 <body>
-    <div class="columns is-centerd is-multiline">
-
-        {% for article in articles %}
-    
-            <div class="column is-half">
-                <div class="card">
-                   {% comment %} <div class="card-image">
-                        <figure class="image is-4by3">
-                        <!--@ToDo fix the image path-->
-                        <img src="{{article.image.name}}" alt="Placeholder image">
-                        </figure>
-                    </div> {% endcomment %}
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-4">{{article.title}}</p>
-                                <p class="subtitle is-6">{{article.author.first_name}} {{article.author.last_name}}</p>
-                            </div>
-                        </div>
-                       
-                       {% for tag in article.tags.all %}
-                        <a href="../{{tag.id}}" class="tag">{{tag}}</a>
-                        {%endfor%} 
-                        <div class="content">{{article.description | safe}}
-                        <br>
-                        <time>{{article.created_date}}</time>
-                        <br>
-                        <a href="../../article/{{article.id}}">Read More</a>
-                        </div>
-                </div>
-            </div>
-            </div>
-        {% endfor %}
-    </div>
+      {% include "./posts.html" %}
 </body>
