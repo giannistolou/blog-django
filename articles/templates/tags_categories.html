@@ -14,7 +14,7 @@
                                 <p class="title is-4">{{item}}</p>
                             </div>
                 </div>
-                 <div class="content">Περιγραφή
+                 <div class="content">{{item.description}}
                  <br>
                    <br>
                         <a href="/{{url}}/{{item.id}}">Read More</a>
@@ -23,6 +23,8 @@
             </div>
             </div>
         </div>
+        {% empty %}
+           {% include '404_card.html' %}
         {% endfor %}
     </div>
 </body>
