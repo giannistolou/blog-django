@@ -1,3 +1,4 @@
+<div class="container">
  <div class="columns is-centerd is-multiline">
 
         {% for article in articles %}
@@ -21,7 +22,7 @@
                        {% for tag in article.tags.all %}
                         <a href="/tag/{{tag.id}}" class="tag">{{tag}}</a>
                         {%endfor%} 
-                        <div class="content">{{article.description | safe}}
+                        <div class="content" style="margin-top:1rem">{{article.description | safe}}
                         <br>
                         <time>{{article.created_date}}</time>
                         <br>
@@ -31,4 +32,5 @@
             </div>
             </div>
         {% endfor %}
+    </div>
     </div>
