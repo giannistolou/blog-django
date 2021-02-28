@@ -7,7 +7,7 @@ def index(request):
     return render(request, 'index.html')
 
 def blog(request):
-    articles = Article.objects.order_by('created_date')[:5]
+    articles = Article.objects.order_by('created_date')
     context = {'articles': articles, 'tab_name': 'Blog'}
     return render(request, 'blog.html', context)
 

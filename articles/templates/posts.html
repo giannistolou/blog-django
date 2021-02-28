@@ -5,17 +5,10 @@
     
             <div class="column is-full">
                 <div class="card">
-                   {% comment %} <div class="card-image">
-                        <figure class="image is-4by3">
-                        <!--@ToDo fix the image path-->
-                        <img src="{{article.image.name}}" alt="Placeholder image">
-                        </figure>
-                    </div> {% endcomment %}
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
                                 <p class="title is-4">{{article.title}}</p>
-                                <p class="subtitle is-6">{{article.author.first_name}} {{article.author.last_name}}</p>
                             </div>
                         </div>
                        
@@ -24,7 +17,8 @@
                         {%endfor%} 
                         <div class="content" style="margin-top:1rem">{{article.description | safe}}
                         <br>
-                        <time>{{article.created_date}}</time>
+
+                        <time><b>{{article.created_date}}</b></time>
                         <br>
                         <a href="/article/{{article.id}}">Read More</a>
                         </div>

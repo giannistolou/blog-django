@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
 from ckeditor.fields import RichTextField
-from datetime import datetime
 
 # Create your models here.
 STATUS = (
@@ -33,9 +32,9 @@ class Article(models.Model):
     author = models.ForeignKey(User, on_delete= models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)
-    created_date = models.DateTimeField('date published')
+    created_date = models.DateField(auto_now_add = True)
     content = RichTextField(blank=True, null = True)
-    updated_on = models.DateTimeField(auto_now= True)
+    updated_on = models.DateField(auto_now= True)
     image = models.ImageField(upload_to='articles/uploads/')
 
     def __str__(self):

@@ -3,6 +3,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{article.title}}</title>
 </head>
-{{article.title}}
-{{article.description}}
-{{article.content}}
+{% include "./header.html" %}
+<div class="container">
+ <div class="is-centerd is-multiline">
+
+    
+            <div class="column is-full">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content" style="text-align:center">
+                                <p class="title is-4">{{article.title}}</p>
+                            </div>
+                        </div>
+                       <div style="text-align:center">
+                       {% for tag in article.tags.all %}
+                        <a href="/tag/{{tag.id}}" class="tag">{{tag}}</a>
+                        {%endfor%} 
+                        </div>
+                        <div class="content" style="margin-top:1rem">{{article.content | safe}}
+                        </div>
+                </div>
+            </div>
+            </div>
+    </div>
+    </div>
