@@ -30,6 +30,7 @@ python3 manage.py createsuperuser
 
 ## Libraries
 * [tinymce](https://www.tiny.cloud/)
+* [Font Awesome 4](#)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
