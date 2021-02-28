@@ -4,11 +4,25 @@
 <title>{{name}}</title>
 </head>
 <body>
-    <ul class="menu-list">
+    <div class="container">
         {% for item in param %}
-            <li>
-                <a href="/{{url}}/{{item.id}}">{{item}}</a>
-            </li>
+         <div class="column">
+            <div class="card">
+             <div class="card-content">
+                <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">{{item}}</p>
+                            </div>
+                </div>
+                 <div class="content">Περιγραφή
+                 <br>
+                   <br>
+                        <a href="/{{url}}/{{item.id}}">Read More</a>
+                        </div>
+                
+            </div>
+            </div>
+        </div>
         {% endfor %}
-</ul>
+    </div>
 </body>
