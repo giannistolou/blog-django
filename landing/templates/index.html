@@ -1,5 +1,19 @@
 <head>
 <title>Index</title>
+<script>
+var i = 0;
+var txt = "And i dont know about design...";
+var speed = 50;
+window.onload = typeWriter;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("header-subtitle").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
 </head>
 
 
@@ -19,9 +33,7 @@
       <p class="title">
         Ioannis Apostolou
       </p>
-      <p class="subtitle">
-        And i don't know about design
-      </p>
+      <p id ="header-subtitle" class="subtitle"></p>
     </div>
   </div>
 </section>
