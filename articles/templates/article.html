@@ -16,7 +16,7 @@
                         </div>
                        <div style="text-align:center">
                        {% for tag in article.tags.all %}
-                        <a href="/tag/{{tag.id}}" class="tag">{{tag}}</a>
+                        <a href="/blog/tag/{{tag.id}}" class="tag">{{tag}}</a>
                         {%endfor%} 
                         </div>
                         <div class="content" style="margin-top:1rem">{{article.content | safe}}

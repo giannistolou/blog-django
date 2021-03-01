@@ -13,14 +13,14 @@
                         </div>
                        
                        {% for tag in article.tags.all %}
-                        <a href="/tag/{{tag.id}}" class="tag">{{tag}}</a>
+                        <a href="/blog/tag/{{tag.id}}" class="tag">{{tag}}</a>
                         {%endfor%} 
                         <div class="content" style="margin-top:1rem">{{article.description | safe}}
                         <br>
 
                         <time><b>{{article.created_date}}</b></time>
                         <br>
-                        <a href="/article/{{article.id}}">Read More</a>
+                        <a href="/blog/article/{{article.id}}">Read More</a>
                         </div>
                 </div>
             </div>

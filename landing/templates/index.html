@@ -47,30 +47,14 @@ Veniam nostrud nisi quis commodo nulla voluptate aute qui non ex et consectetur 
 <br>
 <div class="container">
     <div class="columns is-multiline">
+    {% for skill in skills %}
         <div class="column is-half">
             <div class="box">
-            hello
+           {{skill.name}}
             </div>
         </div>
-
-         <div class="column is-half">
-            <div class="box">
-            hello
-            </div>
-        </div>
-
-         <div class="column is-half">
-            <div class="box">
-            hello
-            </div>
-        </div>
-
-
-         <div class="column is-half">
-            <div class="box">
-            hello
-            </div>
-        </div>
+    {%endfor %}
+         
         
     </div>
 </div>
@@ -87,61 +71,34 @@ Veniam nostrud nisi quis commodo nulla voluptate aute qui non ex et consectetur 
 <br>
     <div class="columns is-multiline">
 
+{% for project in projects %}
     <div class="column">
     <div class="card">
     <p class="card-header-title">
-      Project name
+      {{project.name}}
     </p>
   <div class="card-content">
     <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-      <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+      {{project.context}}
     </div>
   </div>
+ 
   <footer class="card-footer">
-    <a href="#" class="card-footer-item">See project</a>
+  {% if project.link %}
+    <a target="_blank" href="{{project.link}}" class="card-footer-item">See project</a>
+    {% else %}
+      <a  class="card-footer-item">There is no link</a>
+    {% endif %}
   </footer>
+  
 </div>
 </div>
 
-    <div class="column">
-    <div class="card">
-    <p class="card-header-title">
-      Project name
-    </p>
-  <div class="card-content">
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-      <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-    </div>
-  </div>
-  <footer class="card-footer">
-    <a href="#" class="card-footer-item">See project</a>
-  </footer>
-</div>
-</div>
-
-    <div class="column">
-    <div class="card">
-    <p class="card-header-title">
-      Project names
-    </p>
-  <div class="card-content">
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-      <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-    </div>
-  </div>
-  <footer class="card-footer">
-    <a href="#" class="card-footer-item">See project</a>
-  </footer>
-</div>
-</div>
-
-</div>
+{%endfor%}
 
 
 
+<br><br>
 
 </section>  
 

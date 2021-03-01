@@ -3,9 +3,6 @@ from django.shortcuts import render, get_object_or_404
 from .models import Article, Tag, Category
 
 
-def index(request):
-    return render(request, 'index.html')
-
 def blog(request):
     articles = Article.objects.filter(status=1).order_by('created_date')
     context = {'articles': articles, 'tab_name': 'Blog'}
