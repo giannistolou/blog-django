@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from datetime import datetime
 from ckeditor.fields import RichTextField
 
-# Create your models here.
 STATUS = (
     (0,"Draft"),
     (1,"Publish")
@@ -38,5 +37,5 @@ class Article(models.Model):
     image = models.ImageField(upload_to='articles/uploads/')
 
     def __str__(self):
-        return self.title
+        return self.title + ' | ' + str(STATUS[self.status][1])
     
