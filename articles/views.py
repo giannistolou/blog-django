@@ -5,7 +5,8 @@ from .models import Article, Tag, Category
 
 def blog(request):
     articles = Article.objects.filter(status=1).order_by('created_date')
-    context = {'articles': articles, 'tab_name': 'Blog'}
+    tags = Tag.objects.order_by('content')
+    context = {'articles': articles, 'tab_name': 'Blog', 'tags' : tags}
     return render(request, 'blog.html', context)
 
 def article(request, article_id):
@@ -14,7 +15,8 @@ def article(request, article_id):
 
 def tag(request, tag_id):
     articles = Article.objects.filter(tags=tag_id)
-    return render(request, 'tag.html', {'articles': articles})
+    tag = Tag.objects.get(id=tag_id)
+    return render(request, 'tag.html', {'articles': articles, 'tag': tag})
 
 def category(request, category_id):
     articles = Article.objects.filter(category=category_id)
