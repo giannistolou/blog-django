@@ -16,7 +16,8 @@ class Skill(models.Model):
 class Project(models.Model):
     name = models.CharField(max_length = 100)
     context = models.TextField(max_length = 300)
-    link = models.URLField(max_length = 300, blank = True)
+    project_link = models.URLField(max_length = 300, blank = True)
+    article_link = models.URLField(max_length = 300, blank = True)
 
     def __str__(self):
         return self.name

@@ -85,23 +85,31 @@ Veniam nostrud nisi quis commodo nulla voluptate aute qui non ex et consectetur 
 
 {% for project in projects %}
     <div class="column is-one-quarter">
-    <div class="card">
-    <p class="card-header-title">
-      {{project.name}}
-    </p>
+      <div class="card" style="height:100%;">
+        <p class="card-header-title">
+          {{project.name}}
+        </p>
   <div class="card-content">
     <div class="content">
       {{project.context}}
     </div>
   </div>
  
-  <footer class="card-footer">
-  {% if project.link %}
-    <a target="_blank" href="{{project.link}}" class="card-footer-item">See project</a>
-    {% else %}
-      <p  class="card-footer-item">There is no link</p>
-    {% endif %}
-  </footer>
+  
+
+   {% if project.project_link  or project.article_link %}
+    <footer class="card-footer">
+      {% if project.project_link %}
+        <a target="_blank" href="{{project.project_link}}" class="card-footer-item">Project</a>
+      {% endif %}
+
+      {% if project.article_link %}
+        <a target="_blank" href="{{project.article_link}}" class="card-footer-item">Article</a>
+      {% endif %}
+    </footer>
+  {%endif%}
+
+
   
 </div>
 </div>
