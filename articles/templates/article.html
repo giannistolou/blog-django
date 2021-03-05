@@ -12,6 +12,10 @@
                         <div class="media">
                             <div class="media-content" style="text-align:center">
                                 <p class="title is-4">{{article.title}}</p>
+                                <span class="subtitle">{{article.created_date}}</span>
+                                {%if article.created_date != article.updated_on%}
+                                <p class="subtitle is-6">Last updated: {{article.updated_on}}</p>
+                                {%endif%}
                             </div>
                         </div>
                        <div style="text-align:center">

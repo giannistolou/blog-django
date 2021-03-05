@@ -4,7 +4,7 @@ from .models import Article, Tag, Category
 
 
 def blog(request):
-    articles = Article.objects.filter(status=1).order_by('created_date')
+    articles = Article.objects.filter(status=1).order_by('-created_date')
     tags = Tag.objects.order_by('content')
     context = {'articles': articles, 'tab_name': 'Blog', 'tags' : tags}
     return render(request, 'blog.html', context)
