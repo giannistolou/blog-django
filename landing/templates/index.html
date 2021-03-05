@@ -1,5 +1,16 @@
 <head>
 <title>Index</title>
+
+<style>
+@media only screen and (min-width: 769px) {
+ /* https://bulma.io/documentation/overview/responsiveness/ */
+  .card{
+    height: 100%;
+  }
+}
+
+</style>
+
 <script>
 var i = 0;
 var txt = "And i dont know design...";
@@ -85,7 +96,7 @@ Veniam nostrud nisi quis commodo nulla voluptate aute qui non ex et consectetur 
 
 {% for project in projects %}
     <div class="column is-one-quarter">
-      <div class="card" style="height:100%;">
+      <div class="card">
         <p class="card-header-title">
           {{project.name}}
         </p>
