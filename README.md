@@ -28,6 +28,19 @@ if you want to create a super user:
 python3 manage.py createsuperuser
 ```
 
+add `username`, `email` and `passwrod`.
+
+after run
+
+```bash
+python3 manage.py runserver
+```
+
+Open your browser at this link `localhost:8000/admin` and add `tags`, `categories`, `articles`, `projects` and `skills`.
+
+Finally, go to the home page `localhost:8000` and done!
+
+
 ## Libraries
 * [tinymce](https://www.tiny.cloud/)
 * [Font Awesome 4](#)
