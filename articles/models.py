@@ -34,7 +34,7 @@ class Article(models.Model):
     created_date = models.DateField(auto_now_add = True)
     content = RichTextField(blank=True, null = True)
     updated_on = models.DateField(auto_now= True)
-    image = models.ImageField(upload_to='articles/uploads/')
+    image = models.ImageField(upload_to='articles/uploads/', blank=True)
 
     def __str__(self):
         return self.title + ' | ' + str(STATUS[self.status][1])
