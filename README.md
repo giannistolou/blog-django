@@ -17,6 +17,9 @@ python3 manage.py migrate
 python3 manage.py makemigrations
 ```
 
+```bash
+python manage.py migrate --run-syncdb
+```
 
 ```bash
 python3 manage.py runserver
