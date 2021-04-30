@@ -1,8 +1,6 @@
 articles/__pycache__
 blog/__pycache__
 db.sqlite3
-articles/migrations
 .vscode
 articles/uploads
 landing/__pycache__
-landing/migrations

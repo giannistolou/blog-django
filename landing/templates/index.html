@@ -11,20 +11,6 @@
 
 </style>
 
-<script>
-var i = 0;
-var txt = "And i dont know design...";
-var speed = 50;
-window.onload = typeWriter;
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("header-subtitle").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-</script>
 </head>
 
 
@@ -40,24 +26,17 @@ function typeWriter() {
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
     <div class="container has-text-left">
-    Hello i am
       <p class="title">
-        Ioannis Apostolou
+       {{informations.name}}
       </p>
-      <p id ="header-subtitle" class="subtitle"></p>
+      <p id ="header-subtitle" class="subtitle">{{informations.subtitle_name}}</p>
     </div>
   </div>
 </section>
 <br>
 <section class="container has-text-centered">
 <h1 class="title">About me</h1>
-<h2 class="subtitle">Subtitle</h2>
-<p>
-Tempor quis Lorem in amet. Veniam aliquip magna eu in amet reprehenderit velit consequat. Aliquip officia excepteur id deserunt magna elit laborum dolore sunt consectetur aliqua. Occaecat quis elit tempor nisi eiusmod non magna reprehenderit nostrud consectetur excepteur. Tempor culpa officia esse pariatur in tempor culpa consequat sit ut dolore deserunt ad. Eiusmod aute occaecat cupidatat laborum pariatur Lorem incididunt amet et reprehenderit.
-
-Cillum incididunt culpa mollit occaecat sit amet labore enim aute tempor magna irure et laborum. Magna anim sit consequat reprehenderit. Labore cupidatat proident aliquip non sunt. Nulla Lorem commodo quis qui ex voluptate do aliquip. Cillum labore sint amet quis exercitation exercitation consequat eiusmod. Sit adipisicing amet incididunt culpa fugiat in. Aliqua cillum duis reprehenderit tempor esse exercitation ipsum dolore.
-
-Veniam nostrud nisi quis commodo nulla voluptate aute qui non ex et consectetur irure eiusmod. Nostrud eiusmod et laborum sit consectetur. Cupidatat officia tempor pariatur proident tempor reprehenderit aliquip adipisicing do. Eiusmod ad quis occaecat sint ut exercitation occaecat reprehenderit exercitation.</p>
+<p>{{informations.summary}}</p>
 
 </section>
 
@@ -65,7 +44,6 @@ Veniam nostrud nisi quis commodo nulla voluptate aute qui non ex et consectetur 
 <section>
 <section class="container has-text-centered">
 <h1 class="title">Skills</h1>
-<h2 class="subtitle">Subtitle</h2>
 </section>
 <br>
 <div class="container">
@@ -89,7 +67,6 @@ Veniam nostrud nisi quis commodo nulla voluptate aute qui non ex et consectetur 
 <section class="container">
 <section  class="has-text-centered">
 <h1 class="title">Projects</h1>
-<h2 class="subtitle">Subtitle</h2>
 </section>
 <br>
     <div class="columns is-multiline is-centered">

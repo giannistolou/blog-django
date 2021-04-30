@@ -22,4 +22,12 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
+class Information(models.Model):
+    name = models.CharField(max_length = 100)
+    subtitle_name = models.CharField(max_length = 200, default="")
+    summary = models.TextField(max_length = 300, default="")
+
+    def __str__(self):
+        return self.name
+
 
