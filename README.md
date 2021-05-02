@@ -2,9 +2,9 @@
 
 This is my personal website
 
-## Installation
+# Installation
 
-# Django
+## Django
 
 note: If you use windows, type `python` instead of `python3`
 
@@ -22,6 +22,8 @@ then install Django
 ```bash
 python -m pip install Django
 ```
+
+## Project
 
 After all that let's set up the project! Open the terminal with the path of the folder where you have the project.
 
@@ -61,9 +63,9 @@ Finally, go to the home page `localhost:8000` and done!
 
 
 
-## Libraries
+# Libraries
 * [tinymce](https://www.tiny.cloud/)
 * [Font Awesome 4](#)
 
-## License
+# License
 [MIT](https://choosealicense.com/licenses/mit/)
