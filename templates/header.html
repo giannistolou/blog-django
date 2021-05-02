@@ -77,18 +77,32 @@ $(document).ready(function() {
     <div class="navbar-end">
       <div class="navbar-item">
           <p class="control">
-           <a class="button is-warning" style="background-color:#FCA326" target="_blank" href="https://gitlab.com/giannistolou">
+          {% if informations.github_link != ''%}
+          <a class="button is-dark" style="background-color:black" target="_blank" href={{informations.github_link}}>
+              <span class="icon">
+                <i class="fa fa fa-github"></i>
+              </span>
+              <span>Github</span>
+            </a>
+          {% endif %}
+
+          {% if informations.gitlab_link != ''%}
+           <a class="button is-warning" style="background-color:#FCA326" target="_blank" href={{informations.gitlab_link}}>
               <span class="icon">
                 <i class="fa fa fa-gitlab"></i>
               </span>
               <span>Gitlab</span>
             </a>
-            <a class="button is-info" target="_blank" href="https://www.linkedin.com/in/ioannis-apostolou/">
+          {%endif%}
+
+            {% if informations.linkedin_link != ''%}
+            <a class="button is-info" target="_blank" href={{informations.linkedin_link}}>
               <span class="icon">
                 <i class="fa fa fa-linkedin"></i>
               </span>
               <span>Linkedin</span>
             </a>
+             {%endif%}
           </p>
       </div>
     </div>

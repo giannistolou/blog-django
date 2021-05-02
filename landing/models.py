@@ -26,6 +26,9 @@ class Information(models.Model):
     name = models.CharField(max_length = 100)
     subtitle_name = models.CharField(max_length = 200, default="")
     summary = models.TextField(max_length = 300, default="")
+    gitlab_link = models.URLField(max_length = 300, blank = True)
+    github_link = models.URLField(max_length = 300, blank = True)
+    linkedin_link = models.URLField(max_length = 300, blank = True)
 
     def __str__(self):
         return self.name
