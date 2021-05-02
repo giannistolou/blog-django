@@ -29,6 +29,10 @@ class Information(models.Model):
     gitlab_link = models.URLField(max_length = 300, blank = True)
     github_link = models.URLField(max_length = 300, blank = True)
     linkedin_link = models.URLField(max_length = 300, blank = True)
+    facebook_link = models.URLField(max_length = 300, blank = True)
+    instagram_link = models.URLField(max_length = 300, blank = True)
+    twitter_link = models.URLField(max_length = 300, blank = True)
+    youtube_link = models.URLField(max_length = 300, blank = True)
 
     def __str__(self):
         return self.name
