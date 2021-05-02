@@ -2,6 +2,20 @@
 
 This is my personal website
 
+# Features
+
+## Portfolio page
+- [x] Name
+- [X] Social Media
+- [x] Skills
+- [x] Projects
+
+## Blog
+- [x] Articles
+- [x] Tags
+- [x] Categories
+- [x] Article created and updated date
+
 # Installation
 
 ## Django
