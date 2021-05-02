@@ -77,7 +77,7 @@ $(document).ready(function() {
     <div class="navbar-end">
       <div class="navbar-item">
           <p class="control">
-          {% if informations.github_link != ''%}
+          {% if informations.github_link != '' and informations.github_link%}
           <a class="button is-dark" style="background-color:black" target="_blank" href={{informations.github_link}}>
               <span class="icon">
                 <i class="fa fa fa-github"></i>
@@ -86,7 +86,7 @@ $(document).ready(function() {
             </a>
           {% endif %}
 
-          {% if informations.gitlab_link != ''%}
+          {% if informations.gitlab_link != '' and informations.gitlab_link%}
            <a class="button is-warning" style="background-color:#FCA326" target="_blank" href={{informations.gitlab_link}}>
               <span class="icon">
                 <i class="fa fa fa-gitlab"></i>
@@ -95,7 +95,7 @@ $(document).ready(function() {
             </a>
           {%endif%}
 
-            {% if informations.linkedin_link != ''%}
+            {% if informations.linkedin_link != '' and informations.linkedin_link%}
             <a class="button is-info" target="_blank" href={{informations.linkedin_link}}>
               <span class="icon">
                 <i class="fa fa fa-linkedin"></i>
