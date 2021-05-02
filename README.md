@@ -4,14 +4,30 @@ This is my personal website
 
 ## Installation
 
-first you must install [Django](https://docs.djangoproject.com/en/3.1/topics/install/#how-to-install-django) after that open the folder
+# Django
 
 note: If you use windows, type `python` instead of `python3`
+
+first check your python version is  3.x 
+
+check if `pip` is already installed on your pc 
+
+```bash 
+python3 -m pip --version
+```
+if you haven't [check this](https://pip.pypa.io/en/stable/installing/)
+
+then install Django
+
+```bash
+python -m pip install Django
+```
+
+After all that let's set up the project! Open the terminal with the path of the folder where you have the project.
 
 ```bash
 python3 manage.py migrate
 ```
-
 
 ```bash
 python3 manage.py makemigrations
