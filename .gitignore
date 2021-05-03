@@ -4,3 +4,4 @@ db.sqlite3
 .vscode
 articles/uploads
 landing/__pycache__
+landing/migrations/__pycache__
