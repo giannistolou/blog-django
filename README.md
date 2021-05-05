@@ -16,6 +16,9 @@ This is my personal website
 - [x] Categories
 - [x] Article created and updated date
 
+## Technical
+- [X] Postgres
+
 # Installation
 
 ## Django
@@ -37,6 +40,9 @@ then install Django
 python -m pip install Django
 ```
 
+## Postgres
+
+Check [this](https://djangocentral.com/using-postgresql-with-django/)
 ## Project
 
 After all that let's set up the project! Open the terminal with the path of the folder where you have the project.
