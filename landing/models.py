@@ -6,6 +6,17 @@ KNOWLEDGE = (
     (0,"Familiar"),
 )
 
+THEME = (
+    ("primary", "primary"),
+    ("link", "link"),
+    ("info", "info"),
+    ("success", "success"),
+    ("warning", "warning"),
+    ("danger", "danger"),
+    ("dark","dark"),
+    ("light","light")
+)
+
 class Skill(models.Model):
     name= models.CharField(max_length = 100)
     knowledge = models.IntegerField(choices=KNOWLEDGE, default=0)
@@ -33,8 +44,8 @@ class Information(models.Model):
     instagram_link = models.URLField(max_length = 300, blank = True)
     twitter_link = models.URLField(max_length = 300, blank = True)
     youtube_link = models.URLField(max_length = 300, blank = True)
+    theme = models.TextField(choices=THEME, default='info')
 
     def __str__(self):
         return self.name
-
 
