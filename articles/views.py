@@ -1,4 +1,5 @@
 from django.http import HttpResponse, HttpResponseRedirect
+from django.http.response import Http404
 from django.shortcuts import render, get_object_or_404
 from .models import Article, Tag, Category
 
@@ -11,6 +12,8 @@ def blog(request):
 
 def article(request, article_id):
     article = get_object_or_404(Article, pk=article_id)
+    if(article.status != 1):
+         raise Http404
     return render(request, 'article.html', {'article': article})
 
 def tag(request, tag_id):
