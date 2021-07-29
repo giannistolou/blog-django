@@ -30,3 +30,5 @@ def categories(request):
     items = Category.objects.all()
     return render(request, 'tags_categories.html', {'param': items, 'name': 'Categories', 'url': 'tag'})
 
+def page_not_found(request, exception=None):
+     return render(request,'404.html')
