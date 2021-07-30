@@ -30,10 +30,10 @@
 
         <div class="buttons has-addons is-centered">
             {%if articles.has_previous%}
-            <a href="/blog/{{articles.previous_page_number }}/" class="button">Previous Page</a>
+            <a href="{{pagenation_link}}/{{articles.previous_page_number }}/" class="button">Previous Page</a>
             {%endif%}
             {%if articles.has_next%}
-            <a href="/blog/{{articles.next_page_number }}/" class="button">Next Page</a>
+            <a href="{{pagenation_link}}/{{articles.next_page_number }}/" class="button">Next Page</a>
             {%endif%}
           </div>
     </div>
