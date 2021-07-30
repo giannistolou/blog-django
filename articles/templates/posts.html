@@ -1,6 +1,5 @@
 <div class="container">
  <div class="is-centerd is-multiline">
-
         {% for article in articles %}
     
             <div class="column is-full">
@@ -28,5 +27,14 @@
         {% empty %}
            {% include '404_card.html' %}
         {% endfor %}
+
+        <div class="buttons has-addons is-centered">
+            {%if articles.has_previous%}
+            <a href="/blog/{{articles.previous_page_number }}/" class="button">Previous Page</a>
+            {%endif%}
+            {%if articles.has_next%}
+            <a href="/blog/{{articles.next_page_number }}/" class="button">Next Page</a>
+            {%endif%}
+          </div>
     </div>
     </div>

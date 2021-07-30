@@ -2,12 +2,13 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.http.response import Http404
 from django.shortcuts import render, get_object_or_404
 from .models import Article, Tag, Category
+from django.core.paginator import Paginator
 
-
-def blog(request):
-    articles = Article.objects.filter(status=1).order_by('-created_date')
+def blog(request, page_number = 1):
+    articles_οbject = Article.objects.filter(status=1).order_by('-created_date')
+    articles =  Paginator(articles_οbject, 5)
     tags = Tag.objects.order_by('content')
-    context = {'articles': articles, 'tab_name': 'Blog', 'tags' : tags}
+    context = {'articles': articles.page(page_number), 'tab_name': 'Blog', 'tags' : tags}
     return render(request, 'blog.html', context)
 
 def article(request, article_id):
