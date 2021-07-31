@@ -24,8 +24,11 @@
 </head>
 
 
-
+{% if informations.theme %}
 <section class="hero is-halfheight is-{{informations.theme}}">
+{% else %}
+<section class="hero is-halfheight is-info"></section>
+{%endif}
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
     <header>
@@ -36,18 +39,23 @@
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
     <div class="container has-text-left">
+      {% if informations.name %}
       <p class="title">
-      
        {{informations.name}}
       </p>
-      <p id ="header-subtitle" class="subtitle">{{informations.subtitle_name}}</p>
+      {% endif %}
+      {% if informations.subtitle_name %}
+        <p id ="header-subtitle" class="subtitle">{{informations.subtitle_name}}</p>
+      {% endif %}
     </div>
   </div>
 </section>
 <br>
 <section class="container has-text-centered">
 <h1 class="title">About me</h1>
-<p>{{informations.summary}}</p>
+{% if informations.summary %}
+  <p>{{informations.summary}}</p>
+{% endif %}
 
 </section>
 
