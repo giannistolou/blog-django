@@ -15,6 +15,7 @@ This is my personal website
 - [x] Tags
 - [x] Categories
 - [x] Article created and updated date
+- [x] Pagination
 
 ## Technical
 - [X] Postgres
