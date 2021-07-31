@@ -1,9 +1,9 @@
 <div class="container">
- <div class="is-centerd is-multiline">
+ <div class="is-centerd is-multiline columns is-mobile" style="margin: 1rem 0;">
         {% for article in articles %}
     
-            <div class="column is-full">
-                <div class="card">
+            <div class="column is-full-mobile is-4-desktop">
+                <div class="card" style="margin-bottom: 1rem; height: 100%;">
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
@@ -27,14 +27,15 @@
         {% empty %}
            {% include '404_card.html' %}
         {% endfor %}
-
-        <div class="buttons has-addons is-centered">
-            {%if articles.has_previous%}
-            <a href="{{pagenation_link}}/{{articles.previous_page_number }}/" class="button">Previous Page</a>
-            {%endif%}
-            {%if articles.has_next%}
-            <a href="{{pagenation_link}}/{{articles.next_page_number }}/" class="button">Next Page</a>
-            {%endif%}
-          </div>
+        <div class="column is-full">
+            <div class="buttons has-addons is-centered">
+                {%if articles.has_previous%}
+                <a href="{{pagenation_link}}/{{articles.previous_page_number }}/" class="button">Previous Page</a>
+                {%endif%}
+                {%if articles.has_next%}
+                <a href="{{pagenation_link}}/{{articles.next_page_number }}/" class="button">Next Page</a>
+                {%endif%}
+            </div>
+        </div>
     </div>
     </div>
