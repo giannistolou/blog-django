@@ -84,7 +84,7 @@ Finally, go to the home page `localhost:8000` and done!
 
 
 # Libraries
-* [tinymce](https://www.tiny.cloud/)
+* [ckeditor](https://github.com/django-ckeditor/django-ckeditor)
 * [Font Awesome 4](#)
 
 # License
