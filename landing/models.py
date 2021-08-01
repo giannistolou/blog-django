@@ -49,3 +49,13 @@ class Information(models.Model):
     def __str__(self):
         return self.name
 
+class Landing_seo(models.Model):
+    description = models.CharField(max_length = 100)
+    keywords = models.CharField(max_length = 160, help_text="seperate keywords with comma")
+    author = models.CharField(max_length = 100)
+    social_media_url = models.URLField(max_length = 300, blank=True)
+    social_media_site_name = models.URLField(max_length = 300, blank=True)
+    social_media_type = models.CharField(max_length = 200)
+    social_media_image = models.URLField(max_length = 300, blank=True)
+    
+
