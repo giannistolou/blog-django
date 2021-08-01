@@ -7,3 +7,4 @@ landing/__pycache__
 landing/migrations/__pycache__
 landing/migrations
 mydatabase
+blog/.env
