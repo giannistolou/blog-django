@@ -11,15 +11,29 @@
 
 </style>
 
-{% comment %} <!--Google seo-->
-<meta name="description" property="og:description" content="Personal Blog">
-<meta name="keywords" content="Blog, Programming, Portfolio, Python, Django, Tech">
-<meta name="author" content="me">
+
+{% if seo.description %}
+  <meta name="description" property="og:description" content="{{seo.description}}">
+{% endif %}
+{% if seo.keywords %}
+  <meta name="keywords" content="{{seo.keywords}}">
+{% endif %}
+{% if seo.author %}
+  <meta name="author" content="{{seo.author}}">
+{% endif %}
 <!--Social media seo-->
-<meta property="og:url" content="url link" />
-<meta property="og:title" content="Block" />
-<meta property="og:image" content="Image" />
-<meta property="og:image:alt" content="alt of image" /> {% endcomment %}
+{% if seo.social_media_site_name %}
+  <meta property="og:title" content="{{social_media_site_name}}" />
+{% endif %}
+{% if seo.social_media_url %}
+  <meta property="og:url" content="{{seo.social_media_url}}">
+{% endif %}
+{% if seo.social_media_type %}
+  <meta property="og:type" content="{{social_media_type}}">
+{% endif %}
+{% if seo.social_media_image %}
+  <meta property="og:image" content="{{social_media_image}}" />
+{% endif %}
 
 </head>
 

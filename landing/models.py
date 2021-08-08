@@ -50,7 +50,7 @@ class Information(models.Model):
         return self.name
 
 class Landing_seo(models.Model):
-    description = models.CharField(max_length = 100)
+    description = models.CharField(max_length = 150)
     keywords = models.CharField(max_length = 160, help_text="seperate keywords with comma")
     author = models.CharField(max_length = 100)
     social_media_url = models.URLField(max_length = 300, blank=True)
