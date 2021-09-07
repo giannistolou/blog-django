@@ -1,3 +1,4 @@
+from landing.models import Landing_seo
 from django.http import HttpResponse, HttpResponseRedirect
 from django.http.response import Http404
 from django.shortcuts import render, get_object_or_404
@@ -8,7 +9,12 @@ def blog(request, page_number = 1):
     articles_οbject = Article.objects.filter(status=1).order_by('-created_date')
     articles =  Paginator(articles_οbject, 5)
     tags = Tag.objects.order_by('content')
-    context = {'articles': articles.page(page_number), 'tab_name': 'Blog', 'name': 'Blog', 'tags' : tags, 'pagenation_link': '/blog'}
+    try:
+        seo = Landing_seo.objects.all()[0]
+        print(seo)
+    except:
+        seo = []
+    context = {'articles': articles.page(page_number), 'tab_name': 'Blog', 'name': 'Blog', 'tags' : tags, 'pagenation_link': '/blog', 'seo': seo}
     return render(request, 'blog.html', context)
 
 def article(request, article_id):
