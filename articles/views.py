@@ -28,7 +28,7 @@ def tag(request, tag_id, page_number=1):
     articles =  Paginator(articles_οbject, 5)
     tag = Tag.objects.get(id=tag_id)
     pagenation_link = '/blog/tag/' + str(tag_id)
-    return render(request, 'blog.html', {'articles': articles.page(page_number), 'tab_name': 'Tag', 'name': 'Tag', 'tag': tag, 'pagenation_link': pagenation_link})
+    return render(request, 'blog.html', {'articles': articles.page(page_number), 'tab_name': tag, 'name': tag, 'tag': tag, 'pagenation_link': pagenation_link})
 
 
 def tags(request):
