@@ -26,7 +26,7 @@ class Skill(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length = 100)
-    context = models.TextField(max_length = 300)
+    context = models.TextField(max_length = 500)
     project_link = models.URLField(max_length = 300, blank = True)
     article_link = models.URLField(max_length = 300, blank = True)
 

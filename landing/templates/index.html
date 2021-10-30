@@ -8,7 +8,6 @@
     height: 100%;
   }
 }
-
 </style>
 
 
@@ -61,6 +60,7 @@
       {% if informations.subtitle_name %}
         <p id ="header-subtitle" class="subtitle">{{informations.subtitle_name}}</p>
       {% endif %}
+      {% include "./socialMedia.html" %}
     </div>
   </div>
 </section>
@@ -74,7 +74,6 @@
 </section>
 
 <br>
-<section>
 <section class="container has-text-centered">
 <h1 class="title">Skills</h1>
 </section>
@@ -82,7 +81,7 @@
 <div class="container">
     <div class="columns is-multiline is-centered">
     {% for skill in skills %}
-        <div class="column is-half">
+        <div class="column is-4">
             <div class="box">
            {{skill.name}}
             </div>
@@ -103,9 +102,8 @@
 </section>
 <br>
     <div class="columns is-multiline is-centered">
-
 {% for project in projects %}
-    <div class="column is-one-quarter">
+    <div class="column is-half">
       <div class="card">
         <p class="card-header-title">
           {{project.name}}
@@ -137,6 +135,7 @@
 
 {%endfor%}
 
+</div>
 
 </section>  
 
