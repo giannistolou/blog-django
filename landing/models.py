@@ -33,6 +33,17 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
+class Journey(models.Model):
+    title = models.CharField(max_length = 100)
+    organization = models.CharField(max_length = 100, blank= True)
+    description = models.TextField(max_length = 500, blank= True)
+    from_date = models.DateField()
+    to_date = models.DateField(blank= True)
+    until_present_to_date = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.title
+
 class Information(models.Model):
     name = models.CharField(max_length = 100)
     subtitle_name = models.CharField(max_length = 200, default="")
