@@ -9,6 +9,7 @@ This is my personal website
 - [X] Social Media
 - [x] Skills
 - [x] Projects
+- [x] Journey
 
 ## Blog
 - [x] Articles
@@ -38,7 +39,7 @@ if you haven't [check this](https://pip.pypa.io/en/stable/installing/)
 then install Django
 
 ```bash
-python -m pip install Django
+python3 -m pip install Django
 ```
 
 ## Postgres
