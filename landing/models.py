@@ -38,7 +38,7 @@ class Journey(models.Model):
     organization = models.CharField(max_length = 100, blank= True)
     description = models.TextField(max_length = 500, blank= True)
     from_date = models.DateField()
-    to_date = models.DateField(blank= True)
+    to_date = models.DateField()
     until_present_to_date = models.BooleanField(default=False)
 
     def __str__(self):
